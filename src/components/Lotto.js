@@ -10,8 +10,8 @@ import Countdown from "react-countdown";
 
 export default function Lotto({ userAddress, walletType, setSmShow }) {
   const [list, setList] = useState([
-    { title: "EFlotto", selected: true, icon: graphLogo, id: 0 },
-    { title: "EFlotto", selected: false, icon: graphLogo, id: 1 },
+    { title: "Lotto Tokens", selected: true, icon: graphLogo, id: 0 },
+    { title: "Lotto Tokens", selected: false, icon: graphLogo, id: 1 },
   ]);
   const [isLoading, setIsLoading] = useState(false);
   const [tickets, setTickets] = useState("1");
@@ -77,13 +77,13 @@ export default function Lotto({ userAddress, walletType, setSmShow }) {
   return (
     <div className="lotto">
       <div className="lotto__header">
-        <h1 className="lotto__title">Lotto</h1>
+        <h1 className="lotto__title">Lotto *BETA*</h1>
       </div>
       <div className="lotto__body">
         <div className="lotto__cost">
           <span>Cost:</span>{" "}
-          <span>{lottoDetails.ticketPrice * tickets} EFlotto</span> -{" "}
-          <span>5% discount</span>
+          <span>{lottoDetails.ticketPrice * tickets} LOTTO TOKENS</span> {" "}
+          
         </div>
         <div className="lotto__background lotto__columns">
           <div className="lotto__column">
@@ -145,7 +145,7 @@ export default function Lotto({ userAddress, walletType, setSmShow }) {
           <div className="lotto__title">Information</div>
           <ul className="lotto__list">
             <li className="lotto__item">
-              <span>Holders Pot</span>
+              <span>Jackpot</span>
               <span>{lottoDetails.currentJackpot}</span>
             </li>
             {/* <li className="lotto__item">

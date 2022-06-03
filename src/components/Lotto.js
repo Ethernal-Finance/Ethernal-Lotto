@@ -153,18 +153,18 @@ export default function Lotto({ userAddress, walletType, setSmShow }) {
               <span>********</span>
             </li> */}
             <li className="lotto__item">
-              <span>Get Countdown</span>
+              <span>Countdown</span>
               <span>
                 {lottoDetails.countDown &&
-                  `${lottoDetails.countDown[2]} minutes,${lottoDetails.countDown[3]} seconds`}
+                  `${lottoDetails.countDown[2]} minutes, ${lottoDetails.countDown[3]} seconds`}
               </span>
             </li>
             <li className="lotto__item">
               <span>Round Duration</span>
-              <span>{lottoDetails.roundDuration}</span>
+              <span>12 hour</span>
             </li>
             <li className="lotto__item">
-              <span>Get My Entries</span>
+              <span>My Entries</span>
               <span>{userDetails.myEntries}</span>
             </li>
             <li className="lotto__item">

@@ -26,7 +26,7 @@ const MobileMenu = (props) => {
         <div>{props.view === 3 ? <Rewards2 /> : <Rewards1 />}</div>
         <div className="text-gray">Lotto</div>
       </div>
-      {/* <div
+      <div
         className={props.view === 2 ? "selected-tab" : ""}
         onClick={() => {
           props.changeView(2);
@@ -34,7 +34,7 @@ const MobileMenu = (props) => {
       >
         <div>{props.view === 2 ? <Exchange2 /> : <Exchange1 />}</div>
         <div className="text-gray">Exchange</div>
-      </div> */}
+      </div>
     </div>
   );
 };

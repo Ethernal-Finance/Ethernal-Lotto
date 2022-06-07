@@ -273,7 +273,7 @@ const Home = (props) => {
             walletType={walletType}
           />
         </div>
-        {/* <div
+        <div
           className={
             "sections__item " + (view === 2 ? "active-tab" : "inactive-tab")
           }
@@ -285,7 +285,7 @@ const Home = (props) => {
             tokens={tokens}
             walletType={walletType}
           />
-        </div> */}
+        </div>
       </div>
       <MobileMenu view={view} changeView={changeView} />
       <Modal

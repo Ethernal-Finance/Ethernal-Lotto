@@ -10,7 +10,7 @@ import Countdown from "react-countdown";
 
 export default function Lotto({ userAddress, walletType, setSmShow }) {
   const [list, setList] = useState([
-    // { title: "Lotto Tokens", selected: true, icon: graphLogo, id: 0 },
+    { title: "Lotto Tokens", selected: true, icon: graphLogo, id: 0 },
     { title: "Lotto Tokens", selected: false, icon: graphLogo, id: 1 },
   ]);
   const [isLoading, setIsLoading] = useState(false);

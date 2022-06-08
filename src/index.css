@@ -246,13 +246,13 @@ button.send-token-button.btn {
   width: 0.7em;
   height: 0.7em;
 }
+
+
 .exchange-dropdown {
   display: flex;
   position: static;
   flex: flex-grow;
   min-width: 100%;
-  
-
   /* z-index: 0 !important; */
 }
 
@@ -273,8 +273,8 @@ button.send-token-button.btn {
 }
 
 .exchange-dropdown > div:first-child {
-  min-width: 75% !important;
   float: left;
+  flex: 3;
 }
 .exchange-dropdown > div:nth-child(2) {
   float: left;

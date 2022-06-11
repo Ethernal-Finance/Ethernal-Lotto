@@ -3,13 +3,10 @@
 .lotto {
   width: 100%;
 
-  background: radial-gradient(
-    63.03% 53.03% at 50% 50%,
-    #7771d2 0%,
-    #3f2261 100%
-  );
-  border: 4px solid #632f7b;
-  border-radius: 24px;
+  background: rgba(27, 11, 41, 0.2);
+  padding: 10px 15px;
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
   // font-family: "Lato";
   font-family: var(--bs-body-font-family);
 
@@ -17,25 +14,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     height: 56px;
-
-    background: radial-gradient(
-      circle,
-      rgb(166, 165, 182) 0%,
-      rgba(54, 2, 65, 0.295) 100%
-    );
-    border-radius: 20px 20px 0px 0px;
+    border-bottom: 1px #7f02ba solid;
+    background-color: #301d3b;
+    border-radius: 5px;
   }
 
   &__title {
     margin: 0;
     font-family: var(--bs-body-font-family);
     // font-size: var(--bs-body-font-size);
-    font-weight: var(--bs-body-font-weight);
+    // font-weight: var(--bs-body-font-weight);
+    font-weight: bold;
     line-height: var(--bs-body-line-height);
     margin-bottom: 0;
-    font-size: 26px;
+    font-size: 24px;
     // font-weight: 500;
     // font-weight: var(--bs-body-line-height);
     color: #fff;
@@ -45,10 +38,10 @@
   &__cost {
     font-family: var(--bs-body-font-family);
     // font-size: var(--bs-body-font-size);
-    font-weight: var(--bs-body-font-weight);
+    // font-weight: var(--bs-body-font-weight);
     line-height: var(--bs-body-line-height);
-
-    font-size: 26px;
+    font-weight: bold;
+    font-size: 24px;
     // font-weight: 700;
     // font-size: 26px;
     color: #fff;
@@ -64,7 +57,7 @@
   }
 
   &__body {
-    padding: 16px 24px 24px 24px;
+    padding: 16px 5px 24px 5px;
   }
 
   &__background {
@@ -112,8 +105,8 @@
   &__button {
     width: 100%;
     max-width: 228px;
-
-    padding: 0 20px;
+    padding: 10px 13px 13px 20px;
+    // padding: 0 20px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 12px;

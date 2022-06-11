@@ -232,16 +232,18 @@ const Exchange = (props) => {
         <div className="ExchangeInfoHeader">
           <div>Exchange</div>
           <div className="claybtn2 exchange__header-button" onClick={() => setButtonPopup2(true)}>
-            <Blackpeach className="Peach" />
+            <p className="reward_listing_btn Peach">reward listing</p>
+            {/* <Blackpeach className="Peach" /> */}
           </div>
 
           <div>
             <Popup2 trigger={divPopup2} setTrigger={setButtonPopup2}>
+              
               <div>
                 <iframe
                   className="peachframe"
                   src={
-                    "https://hub.peachfolio.app/?address=0x17bd2e09fa4585c15749f40bb32a6e3db58522ba&network=BSC&ticker=ETHFIN"
+                    "https://app.ethernalfinance.io/listing_rewards/ethernal-finance"
                   }
                   title="Rewards calculator"
                   frameBorder="no"

@@ -46,11 +46,11 @@ export default function TopSlider(props) {
         <span className="sp-item-bottom">{props.distributedRewards} BUSD</span>
       </div>
 
-      <div className="mob-scroll" style={{ width: "350px" }}>
+      {/* <div className="mob-scroll" style={{ width: "350px" }}>
         <span className="sp-item-Greeting2">{props.Balance}</span>
         <span className="sp-item-Greeting3">Welcome to Ethernal Finance</span>
         <span></span>
-      </div>
+      </div> */}
     </Slider>
   );
 }

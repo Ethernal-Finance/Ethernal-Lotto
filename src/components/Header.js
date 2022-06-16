@@ -56,7 +56,7 @@ const Header = (props) => {
                   onClick={connectWallet}
                   disabled={contractData.availableTokens.length === 0}
                 >
-                  Connect wallet
+                  Connect Wallet
                 </Button>
               </div>
             )}
@@ -132,7 +132,7 @@ const Header = (props) => {
                     onClick={connectWallet}
                     disabled={contractData.availableTokens.length === 0}
                   >
-                    Connect wallet
+                    Connect Wallet
                   </Button>
                 </div>
               )}

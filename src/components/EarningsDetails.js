@@ -13,7 +13,7 @@ const EarningsDetails = (props) => {
         </div>
       </div>
       <div className=" text-start">
-        <div className="text-white">Earnings Availble</div>
+        <div className="text-white">Earnings Available</div>
         <div className="text-primary">
           {Number(userData.BNBremaining).toFixed(18)} BNB
         </div>

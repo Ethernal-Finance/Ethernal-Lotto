@@ -27,7 +27,7 @@ const Header = (props) => {
   return (
     <div className="header ">
       <div className="row ">
-      <div className="Adspace3"><iframe  
+      <div className="no-mobile Adspace3"><iframe  
             src='//ad.a-ads.com/1932700?size=970x90'
             data-aa='1932700'
             title="Lotto Ad"
@@ -60,42 +60,8 @@ const Header = (props) => {
                 </Button>
               </div>
             )}
-
-             {/* <div className="d-flex menu">
-              <div className="flex-item flex-grow">
-                <span className="sp-item-top">Holders Pot</span>
-                <span className="sp-item-bottom">
-                  {Number(contractData.holdersPot).toFixed(4)} BNB
-                </span>
-              </div>
-              <div className="flex-item flex-grow">
-                <span className="sp-item-top">Lottery Pot</span>
-                <span className="sp-item-bottom">
-                  {Number(contractData.LotteryPot)
-                    .toFixed(0)
-                    .toLocaleString("en-US")}{" "}
-                  ETHFIN
-                </span>
-              </div>
-              <div className="flex-item flex-grow">
-                <span className="sp-item-top">BUYBACK POT</span>
-                <span className="sp-item-bottom">
-                  {Number(contractData.BuyBackPotBNB).toFixed(4)} BNB
-                </span>
-              </div>
-              <div className="flex-item flex-grow">
-                <span className="sp-item-top">HOLDERS TIL BUYBACK</span>
-                <span className="sp-item-bottom">
-                  {Number(contractData.nextBuyBack).toFixed(0)}
-                </span>
-              </div>
-              <div className="flex-item flex-grow">
-                <span className="sp-item-top">Rewards to all holders</span>
-                <span className="sp-item-bottom">
-                {Number(contractData.distributedRewards).toFixed(2)} BUSD
-                </span>
-              </div>
-            </div> */}
+            <div className="navbar1">
+            
             <Navbar.Collapse
               className="just-ri justify-content-end"
               id="basic-navbar-nav"
@@ -171,6 +137,8 @@ const Header = (props) => {
                 </div>
               )}
             </Navbar.Collapse>
+            </div>
+
           </Navbar>
         </div>
       </div>

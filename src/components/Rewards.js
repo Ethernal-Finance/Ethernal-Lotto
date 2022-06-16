@@ -5,11 +5,13 @@ import TokenSlider from "./TokenSlider";
 import AddAnother from "./AddAnother";
 import PayoutDetails from "./PayoutDetails";
 import Popup from "../components/Popup";
+import Popup3 from "../components/Popup3"
 import EarningsDetails from "./EarningsDetails";
 import { ReactComponent as Calc } from "../assets/images/Calc.svg";
 
 const LeftContent = (props) => {
   const [divPopup, setButtonPopup] = useState(false);
+  const [divPopup3, setButtonPopup3] = useState(false);
   const {
     userTokens,
     setUserTokens,
@@ -138,9 +140,15 @@ const LeftContent = (props) => {
       <div className="payout-info">
         <div className="payoutinfo2">
           <div className="payoutinfoHeader">
-            <span>Your Rewards</span>
+            <span>Rewards</span>
             <div className="claybtn2" onClick={() => setButtonPopup(true)}>
               <Calc class="Calc" />
+            </div>
+            <div className="claybtn2" onClick={() => setButtonPopup3(true)}>
+              <div className="rewardstext">
+                Rewards list
+
+              </div>
             </div>
           </div>
           <PayoutDetails contractData={props.contractData} userData={userData} />
@@ -240,7 +248,7 @@ const LeftContent = (props) => {
         </div>
       </div>
 
-      <div className="mt-1 only-mobile">
+      <div className="mt-1 mobilead1 only-mobile">
         <iframe
           src="//ad.a-ads.com/1932517?size=320x50"
           data-aa="19325177"
@@ -265,6 +273,22 @@ const LeftContent = (props) => {
           }}
         />
       </Popup>
+      <Popup3 trigger={divPopup3} setTrigger={setButtonPopup3}>
+        <iframe
+          src={"https://app.ethernalfinance.io/listing_rewards/ethernal-finance"}
+          title="Rewards calculator"
+          frameBorder="no"
+          style={{
+            justifyContent: "flex-start",
+            width: "340px",
+            height: "768px",
+            boxShadow: "0 0.5rem 1.2rem rgb(189 197 209 / 20%)",
+            // border: "1px solid #dd6e0a",
+            borderRadius: "1rem",
+            backgroundColor: "#20053a"
+          }}
+        />
+      </Popup3>
     </>
   );
 };

@@ -231,27 +231,9 @@ const Exchange = (props) => {
       <div className="ExchangeInfoBox">
         <div className="ExchangeInfoHeader">
           <div>Exchange</div>
-          <div className="claybtn2 exchange__header-button" onClick={() => setButtonPopup2(true)}>
-            <p className="reward_listing_btn Peach">reward listing</p>
-            {/* <Blackpeach className="Peach" /> */}
-          </div>
+          
 
-          <div>
-            <Popup2 trigger={divPopup2} setTrigger={setButtonPopup2}>
-              
-              <div>
-                <iframe
-                  className="peachframe"
-                  src={
-                    "https://app.ethernalfinance.io/listing_rewards/ethernal-finance"
-                  }
-                  title="Rewards calculator"
-                  frameBorder="no"
-                  style={{}}
-                />
-              </div>
-            </Popup2>
-          </div>
+          
         </div>
         <div className="sub-header-2 text-start">
           Trade tokens in an instant
@@ -332,7 +314,7 @@ const Exchange = (props) => {
         <div className="custom-divider"></div>{" "}
       </div>
 
-      <div className="mt-1 Adspace1 no-mobile">
+      <div className="mt-1 Adspace no-mobile">
         <iframe
           src="//ad.a-ads.com/1932517?size=320x50"
           data-aa="19325177"
@@ -340,7 +322,7 @@ const Exchange = (props) => {
           frameBorder="no"
         />
       </div>
-      <div className="mt-1 only-mobile">
+      <div className="mt-1 mobilead1 only-mobile">
         <iframe
           src="//ad.a-ads.com/1932517?size=320x50"
           data-aa="19325177"

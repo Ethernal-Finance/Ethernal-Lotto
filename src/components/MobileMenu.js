@@ -7,7 +7,7 @@ import { ReactComponent as Exchange2 } from "../assets/images/exchange2.svg";
 
 const MobileMenu = (props) => {
   return (
-    <div className="mobile-menu  d-flex justify-content-around">
+    <div className="mobile-menu only-mobile  d-flex justify-content-around">
       <div
         className={props.view === 1 ? "selected-tab" : ""}
         onClick={() => {

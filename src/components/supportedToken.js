@@ -5744,4 +5744,28 @@ export const tokensSupported = [
     image:
       "https://tokens.1inch.exchange/0xa57ac35ce91ee92caefaa8dc04140c8e232c2e50.png",
   },
+  {
+    symbol: "SATROK",
+    name: "Satoshi Roku INU",
+    decimals: 18,
+    address: "0xb9638229873185FD293B3294702427F90c1bC177",
+    logoURI:
+      "https://uploads.codesandbox.io/uploads/user/f1165d18-70f7-4c21-8c62-754fe7cbf7ba/M-EO-graph-logo2.png",
+    label: "SATROK",
+    value: "SATROK",
+    image:
+      "https://uploads.codesandbox.io/uploads/user/f1165d18-70f7-4c21-8c62-754fe7cbf7ba/M-EO-graph-logo2.png",
+  },
+  {
+    symbol: "LOTTOBETA",
+    name: "Ethernal Lottery Beta",
+    decimals: 18,
+    address: "0x7Dc5eF8aCae1CeeE59E77e65dCD728f2EFED2509",
+    logoURI:logo,
+    label: "LOTTOBETA",
+    value: "LOTTOBETA",
+    image:logo,
+    
+  },
+
 ];

@@ -316,16 +316,16 @@ const Exchange = (props) => {
 
       <div className="mt-1 Adspace no-mobile">
         <iframe
-          src="//ad.a-ads.com/1932517?size=320x50"
-          data-aa="19325177"
+          src="//ad.a-ads.com/2029304?size=320x50"
+          data-aa="2029304"
           title="Lotto Ad"
           frameBorder="no"
         />
       </div>
       <div className="mt-1 mobilead1 only-mobile">
         <iframe
-          src="//ad.a-ads.com/1932517?size=320x50"
-          data-aa="19325177"
+          src="//ad.a-ads.com/2029304?size=320x50"
+          data-aa="2029304"
           title="Lotto Ad"
           frameBorder="no"
         />

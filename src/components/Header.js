@@ -27,14 +27,15 @@ const Header = (props) => {
   return (
     <div className="header ">
       <div className="row ">
-      <div className="no-mobile Adspace3"><iframe  
+      {/* <div className="no-mobile Adspace3">
+        <iframe  
             src='//ad.a-ads.com/2029305?size=970x90'
             data-aa='2029305'
             title="Lotto Ad"
             frameBorder="no"
             width="970px"
             height="90px"
-            /></div>
+            /></div> */}
         <div className="col-md-12">
           
           <Navbar variant="dark" expand="lg" sticky="top">

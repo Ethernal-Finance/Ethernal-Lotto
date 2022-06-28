@@ -103,14 +103,21 @@ export default function Lotto({ userAddress, walletType, setSmShow }) {
                 type="number"
                 className="form-control"
                 value={tickets}
-                onChange={(e) => setTickets(e.target.value)}
+                onChange={(e) => setTickets(e.target.value)} 
+                min="0"
                 onWheel={(e) => e.target.blur()}
               />
             </div>
-          </div>
-          <div className="lotto__column">
             <div className="lotto__row">
-              <span>Currency</span>
+              <span>Lotto Tokens</span>
+              <span>
+                Balance: <strong>{userDetails.balance}</strong>
+              </span>
+            </div>
+          </div>
+          {/* <div className="lotto__column">
+            <div className="lotto__row">
+              <span>Lotto Tokens</span>
               <span>
                 Balance: <strong>{userDetails.balance}</strong>
               </span>
@@ -126,7 +133,7 @@ export default function Lotto({ userAddress, walletType, setSmShow }) {
                 )
               }
             />
-          </div>
+          </div> */}
         </div>
         {lottoDetails.ticketPrice * tickets > userDetails.balance && (
           <p className="lotto__error">Not enough balance...</p>

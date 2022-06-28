@@ -65,10 +65,12 @@
     border-radius: 12px;
   }
 
-  &__columns {
+  .lotto__columns {
     display: flex;
     margin-top: 16px;
-  }
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
   &__column {
     width: 50%;

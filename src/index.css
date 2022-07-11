@@ -1,3 +1,13 @@
+.adfont{
+  color: yellow;
+  margin-top: -105px;
+
+}
+.disfont{
+  color: yellow;
+ font-size: x-small;
+
+}
 .app-wrapper {
   background: #0d0217;
   background-image: url(/src/wave.png);

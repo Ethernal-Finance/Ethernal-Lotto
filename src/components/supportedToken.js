@@ -5760,7 +5760,7 @@ export const tokensSupported = [
     symbol: "LOTTOBETA",
     name: "Ethernal Lottery Beta",
     decimals: 18,
-    address: "0x7Dc5eF8aCae1CeeE59E77e65dCD728f2EFED2509",
+    address: "0x2105F99c18059BF922bF054970eB3eA23FE15faE",
     logoURI:logo,
     label: "LOTTOBETA",
     value: "LOTTOBETA",

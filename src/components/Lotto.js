@@ -200,6 +200,7 @@ export default function Lotto({ userAddress, walletType, setSmShow }) {
               <span>Next Round Pot</span>
               <span>{lottoDetails.newPot}</span>
             </li>
+            <div className="disfont">Disclaimer: The Decentralized Autonomous Lottery is decentralized, experimental, and is provided with NO guarantees or warranties of any kind. Lotto tokens are NOT bank deposits, are NOT legal tender, You agree that the use of Ethernal Lotto is at your own risk. In no event should anyone but yourself be liable for any direct or indirect losses caused by any activities on this site or any other site hosted by Ethernal Finance DAO! Investing in cryptocurrencies and NFTs are inherently risky activities. You must conduct your due diligence before buying or selling any cryptocurrency or NFT and come to your conclusions. </div>
           </ul>
         </div>
       </div>

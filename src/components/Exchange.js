@@ -321,6 +321,7 @@ const Exchange = (props) => {
           title="Lotto Ad"
           frameBorder="no"
         />
+        <div className="adfont">Paid Advertisement</div>
       </div>
       <div className="mt-1 mobilead1 only-mobile">
         <iframe
@@ -329,6 +330,7 @@ const Exchange = (props) => {
           title="Lotto Ad"
           frameBorder="no"
         />
+        <div className="adfont">Paid Advertisement</div>
       </div>
     </div>
   );

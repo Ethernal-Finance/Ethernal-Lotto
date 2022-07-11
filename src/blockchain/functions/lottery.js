@@ -6,7 +6,7 @@ let provider = new ethers.providers.JsonRpcProvider(
   // "https://data-seed-prebsc-2-s2.binance.org:8545/"
 );
 
-let lottoAddress = "0x7Dc5eF8aCae1CeeE59E77e65dCD728f2EFED2509";
+let lottoAddress = "0x2105F99c18059BF922bF054970eB3eA23FE15faE";
 
 let lottoInstance = new ethers.Contract(lottoAddress, ABI, provider);
 

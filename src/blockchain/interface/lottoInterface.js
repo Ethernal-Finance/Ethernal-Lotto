@@ -4,7 +4,7 @@ import WalletConnectProvider from "@walletconnect/web3-provider";
 
 const Web3 = require("web3");
 
-export const contractAddress = "0x7Dc5eF8aCae1CeeE59E77e65dCD728f2EFED2509";
+export const contractAddress = "0x2105F99c18059BF922bF054970eB3eA23FE15faE";
 
 async function ContratInterface(walletType) {
   let web3;

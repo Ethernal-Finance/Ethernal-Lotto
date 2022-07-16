@@ -4,20 +4,20 @@ import graphLogo from "../assets/images/graph-logo.png";
 import {
   getLottoNumbers,
   EnterDraw,
-  getUserValues,
+  getUserValues
 } from "../blockchain/functions/lottery";
 import Countdown from "react-countdown";
 
 export default function Lotto({ userAddress, walletType, setSmShow }) {
   const [list, setList] = useState([
     { title: "Lotto Tokens", selected: true, icon: graphLogo, id: 0 },
-    { title: "Lotto Tokens", selected: false, icon: graphLogo, id: 1 },
+    { title: "Lotto Tokens", selected: false, icon: graphLogo, id: 1 }
   ]);
   const [isLoading, setIsLoading] = useState(false);
   const [tickets, setTickets] = useState("1");
   const [userDetails, setUserDetails] = useState({
     myEntries: "",
-    balance: "0",
+    balance: "0"
   });
   const [lottoDetails, setLottoDetails] = useState({
     currentJackpot: "",
@@ -29,7 +29,7 @@ export default function Lotto({ userAddress, walletType, setSmShow }) {
     roundEntries: "",
     startTime: "",
     ticketPrice: "",
-    myEntries: "",
+    myEntries: ""
   });
 
   const handleEnter = async () => {
@@ -53,7 +53,7 @@ export default function Lotto({ userAddress, walletType, setSmShow }) {
   const getNumbers = async () => {
     let result = await getLottoNumbers();
     if (result) {
-      setLottoDetails({...result});
+      setLottoDetails({ ...result });
     }
   };
 
@@ -61,10 +61,55 @@ export default function Lotto({ userAddress, walletType, setSmShow }) {
     if (userAddress) {
       let result = await getUserValues(userAddress);
       if (result) {
-        setUserDetails({...result});
+        setUserDetails({ ...result });
       }
     }
   };
+
+  ///////setting counter
+  const [hours, setHours] = useState(lottoDetails.countDown[1]);
+  const [minutes, setMinutes] = useState(lottoDetails.countDown[2]);
+  const [seconds, setSeconds] = useState(lottoDetails.countDown[3]);
+
+  function countDownCounter() {
+    setHours(lottoDetails.countDown[1]);
+    setMinutes(lottoDetails.countDown[2]);
+    setSeconds(lottoDetails.countDown[3]);
+  }
+
+  useEffect(() => {
+    let myInterval = setInterval(() => {
+      if (seconds > 0) {
+        setSeconds(seconds - 1);
+      }
+      if (seconds === 0) {
+        if (minutes === 0) {
+          if (hours === 0) {
+            //clearInterval(myInterval);
+            countDownCounter();
+          } else {
+            setHours(hours - 1);
+            setMinutes(59);
+            setSeconds(59);
+          }
+        } else {
+          setMinutes(minutes - 1);
+          setSeconds(59);
+        }
+      }
+    }, 1000);
+    return () => {
+      clearInterval(myInterval);
+    };
+  }, [seconds]);
+
+  useEffect(() => {
+    //console.log(lottoDetails);
+    setHours(lottoDetails.countDown[1]);
+    setMinutes(lottoDetails.countDown[2]);
+    setSeconds(lottoDetails.countDown[3]);
+    console.log(minutes);
+  }, [lottoDetails]);
 
   useEffect(() => {
     getUserNumbers();
@@ -82,8 +127,7 @@ export default function Lotto({ userAddress, walletType, setSmShow }) {
       <div className="lotto__body">
         <div className="lotto__cost">
           <span>Cost:</span>{" "}
-          <span>{lottoDetails.ticketPrice * tickets} LOTTO TOKENS</span> {" "}
-          
+          <span>{lottoDetails.ticketPrice * tickets} LOTTO TOKENS</span>{" "}
         </div>
         <div className="lotto__background lotto__columns">
           <div className="lotto__column">
@@ -103,7 +147,7 @@ export default function Lotto({ userAddress, walletType, setSmShow }) {
                 type="number"
                 className="form-control"
                 value={tickets}
-                onChange={(e) => setTickets(e.target.value)} 
+                onChange={(e) => setTickets(e.target.value)}
                 min="0"
                 onWheel={(e) => e.target.blur()}
               />
@@ -161,10 +205,7 @@ export default function Lotto({ userAddress, walletType, setSmShow }) {
             </li> */}
             <li className="lotto__item">
               <span>Countdown</span>
-              <span>
-                {lottoDetails.countDown &&
-                  `${lottoDetails.countDown[2]} minutes, ${lottoDetails.countDown[3]} seconds`}
-              </span>
+              <span>{`${hours} hours, ${minutes} minutes, ${seconds} seconds`}</span>
             </li>
             <li className="lotto__item">
               <span>Round Duration</span>
@@ -200,7 +241,18 @@ export default function Lotto({ userAddress, walletType, setSmShow }) {
               <span>Next Round Pot</span>
               <span>{lottoDetails.newPot}</span>
             </li>
-            <div className="disfont">Disclaimer: The Decentralized Autonomous Lottery is decentralized, experimental, and is provided with NO guarantees or warranties of any kind. Lotto tokens are NOT bank deposits, are NOT legal tender, You agree that the use of Ethernal Lotto is at your own risk. In no event should anyone but yourself be liable for any direct or indirect losses caused by any activities on this site or any other site hosted by Ethernal Finance DAO! Investing in cryptocurrencies and NFTs are inherently risky activities. You must conduct your due diligence before buying or selling any cryptocurrency or NFT and come to your conclusions. </div>
+            <div className="disfont">
+              Disclaimer: The Decentralized Autonomous Lottery is decentralized,
+              experimental, and is provided with NO guarantees or warranties of
+              any kind. Lotto tokens are NOT bank deposits, are NOT legal
+              tender, You agree that the use of Ethernal Lotto is at your own
+              risk. In no event should anyone but yourself be liable for any
+              direct or indirect losses caused by any activities on this site or
+              any other site hosted by Ethernal Finance DAO! Investing in
+              cryptocurrencies and NFTs are inherently risky activities. You
+              must conduct your due diligence before buying or selling any
+              cryptocurrency or NFT and come to your conclusions.{" "}
+            </div>
           </ul>
         </div>
       </div>
